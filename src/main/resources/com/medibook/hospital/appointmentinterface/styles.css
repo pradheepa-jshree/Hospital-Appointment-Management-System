@@ -1,0 +1,224 @@
+/*
+================================================================================
+  SHARED STYLES & GLOBAL SETTINGS
+================================================================================
+*/
+/* Applies the background to both the Login screen (.root) and the Portals (.root-pane) */
+.root, .root-pane {
+    /* Corrected Path: Go up 4 directories to the 'resources' root */
+    -fx-background-image: url("../../../../background.png");
+
+    -fx-background-size: cover;
+    -fx-background-color: #f0f4f8; /* Fallback color */
+    -fx-font-family: "System";
+}
+
+/* Adds padding ONLY to the portal screens to create the floating panel effect */
+.root-pane {
+    -fx-padding: 20px;
+}
+/*
+================================================================================
+  NEW LOGIN SCREEN STYLES
+================================================================================
+*/
+/* --- App Header (Logo and Name) --- */
+.app-name-label {
+    -fx-font-size: 42px; /* Makes the font larger */
+    -fx-font-weight: bold; /* Makes the font bold */
+    -fx-text-fill: #3D4A5C; /* A professional dark blue-gray */
+}
+/* The rest of your login styles start here */
+.welcome-title {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.form-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 5);
+    -fx-pref-width: 350px;
+}
+
+.login-pane {
+    -fx-border-color: #A0C4FF;
+    -fx-border-width: 2px;
+}
+
+.register-pane {
+    -fx-border-color: #BDECB6;
+    -fx-border-width: 2px;
+}
+
+.form-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.register-title-main { -fx-font-size: 18px; -fx-font-weight: normal; -fx-text-fill: #555; }
+.register-title-sub { -fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333; }
+
+.input-icon {
+    -fx-font-size: 16px;
+    -fx-fill: #808080;
+    -fx-translate-x: 12px;
+}
+
+.icon-text-field {
+    -fx-prompt-text-fill: #AAAAAA;
+    -fx-padding: 0 10px 0 40px;
+}
+
+.form-pane .text-field, .form-pane .password-field, .form-pane .combo-box {
+    -fx-pref-height: 45px;
+    -fx-font-size: 14px;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.login-pane .text-field:focused, .login-pane .password-field:focused, .login-pane .combo-box:focused {
+    -fx-border-color: #4A90E2;
+    -fx-border-width: 1.5px;
+}
+.register-pane .text-field:focused, .register-pane .password-field:focused {
+    -fx-border-color: #28a745;
+    -fx-border-width: 1.5px;
+}
+
+.login-button, .register-button {
+    -fx-pref-height: 45px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+.login-button { -fx-background-color: #007bff; }
+.login-button:hover { -fx-background-color: #0056b3; }
+.register-button { -fx-background-color: #28a745; }
+.register-button:hover { -fx-background-color: #218838; }
+
+.forgot-password-link {
+    -fx-font-size: 13px;
+    -fx-text-fill: #007bff;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-padding: 5px 0;
+    -fx-cursor: hand;
+}
+.forgot-password-link:hover { -fx-underline: true; }
+
+
+/*
+================================================================================
+  DOCTOR & PATIENT PORTAL LAYOUT & DASHBOARD STYLES
+================================================================================
+*/
+
+.side-navigation-bar {
+    -fx-background-color: #f1f5f9;
+    -fx-pref-width: 75px;
+    -fx-padding: 15px 0;
+    -fx-alignment: top-center;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 4);
+}
+
+.content-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 15;
+    -fx-padding: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 4);
+    -fx-margin-left: 20px;
+}
+
+.nav-button { -fx-background-color: transparent; -fx-background-radius: 10px; -fx-pref-width: 50px; -fx-pref-height: 50px; -fx-cursor: hand; }
+.nav-button .glyph-icon { -fx-fill: #475569; -fx-font-size: 22px; }
+.nav-button:hover { -fx-background-color: #e2e8f0; }
+.nav-button-active { -fx-background-color: #3b82f6; }
+.nav-button-active .glyph-icon { -fx-fill: white; }
+
+.page-title { -fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #1e293b; }
+.section-title { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1e293b; }
+.stat-card { -fx-background-color: white; -fx-background-radius: 12px; -fx-padding: 20px; -fx-min-width: 200px; -fx-border-color: #e2e8f0; -fx-border-width: 1px; -fx-border-radius: 12px; }
+.stat-value-label { -fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #1e293b; }
+.stat-title-label { -fx-font-size: 14px; -fx-text-fill: #64748b; }
+.action-item-label { -fx-font-size: 16px; -fx-text-fill: #334155; -fx-line-spacing: 5px; }
+
+.action-button, .action-button-secondary { -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 12px 24px; -fx-background-radius: 8px; -fx-cursor: hand; }
+.action-button { -fx-background-color: #3b82f6; -fx-text-fill: white; }
+.action-button:hover { -fx-background-color: #2563eb; }
+.action-button-secondary { -fx-background-color: #e2e8f0; -fx-text-fill: #334155; }
+.action-button-secondary:hover { -fx-background-color: #cbd5e1; }
+/* ... (all your existing styles for .root, login, portals, TableView, etc. are above this) ... */
+
+/* --- TABLE VIEW STYLES (For Patient List, Schedule, Messages etc.) --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #dee2e6;
+    /* ... other table styles ... */
+}
+
+/* Change row color on hover for better user feedback */
+.table-row-cell:hover {
+    -fx-background-color: #f1f3f5;
+}
+
+/* --- PASTE THE NEW CODE STARTING HERE --- */
+
+/* --- PROFILE VIEW STYLES --- */
+.profile-grid {
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+    -fx-max-width: 600; /* Constrain the width for readability */
+}
+
+.profile-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748b; /* Muted gray-blue */
+    -fx-alignment: center-right;
+}
+
+.profile-value {
+    -fx-font-size: 16px;
+    -fx-text-fill: #1e293b; /* Dark text */
+}
+
+/* --- AVAILABILITY VIEW STYLES --- */
+.availability-row {
+    -fx-padding: 12px;
+    -fx-background-color: #f8f9fa; /* Very light gray background */
+    -fx-background-radius: 8px;
+    -fx-max-width: 500;
+}
+
+.availability-day {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #334155;
+}
+
+.availability-time {
+    -fx-font-size: 14px;
+    -fx-font-family: 'monospace'; /* Good for aligning numbers */
+    -fx-text-fill: #475569;
+}
+
+/* --- DASHBOARD ACTION ITEM STYLES --- */
+.action-item-box {
+    -fx-spacing: 15;
+    -fx-alignment: center-left;
+}
+
+.action-item-icon {
+    -fx-font-size: 20px;
+    -fx-fill: #3b82f6; /* Blue icon color */
+}
+
+/* End of file */
